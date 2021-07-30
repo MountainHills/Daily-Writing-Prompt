@@ -1,4 +1,5 @@
 // This is the data for the application.
+const ON_LANDING_PAGE = true;
 let character = [];
 let setting = [];
 let plot = [];
@@ -53,6 +54,13 @@ function randomPrompt()
     document.getElementById("character").innerHTML = character[randomizer(character)];
     document.getElementById("setting").innerHTML = setting[randomizer(setting)];
     document.getElementById("plot").innerHTML = plot[randomizer(plot)];
+
+    /*
+        TODO:
+        If the randomizer is clicked on the landing page, the view would go to the prompt-section.
+            -> It would also delete the button on the landing page.
+        If the randomizer is clicked on the section page, the view would still remain as is.
+    */
 }
 
 // Resets the boxes containing the prompt.
@@ -61,8 +69,10 @@ function reset()
     document.getElementById("character").innerHTML = "Character";
     document.getElementById("setting").innerHTML = "Setting";
     document.getElementById("plot").innerHTML = "Plot";
+
+    /* 
+        TODO:
+        The reset button would not appear until the button on the landing page is gone.
+            If this button is pressed then the 
+    */
 }
-
-// const testArray = [1,2,3,4,5,6,7, "Anton"];
-
-// console.log(testArray[randomizer(testArray)]);

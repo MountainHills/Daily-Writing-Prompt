@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,39 @@
     <link rel="stylesheet" href="css/style.css">
     <title>This is the prototype for later.</title>
 </head>
+
 <body>
-    <p>How am I going to put in the Javascript for later?</p>
-    <p>How would I affect the HTML and CSS using Javascript</p>
-    <p>I have to relearn a lot of things still. I know that really sucks.</p>
-    <p>I like this code editor since it has version control.</p>
-    <p>Hello Again</p>
-    <button type="button" onclick="randomPrompt()">Randomizer</button>
-    <button type="button" onclick="reset()">Reset</button>
-    <main>
-        <div class="box">
-            <p id="character">
-                Character
-            </p>
+    <!-- TODO: Create button styles. -->
+    <section id="landing-page">
+        <div id="introduction">
+            <h1>Daily Writing Prompt</h1>
+            <button type="button" onclick="randomPrompt()">Randomizer</button>
         </div>
-        <div class="box-odd">
-            <p id="setting">
-                Setting
-            </p>
-        </div>
-        <div class="box">
-            <p id="plot">
-                Plot
-            </p>
-        </div>    
-    </main>
-    
+    </section>
+
+    <section id="prompt-section">
+        <main>
+            <div class="box">
+                <p id="character">
+                    Character
+                </p>
+            </div>
+            <div class="box-odd">
+                <p id="setting">
+                    Setting
+                </p>
+            </div>
+            <div class="box">
+                <p id="plot">
+                    Plot
+                </p>
+            </div>
+        </main>
+        <button type="button" onclick="reset()">Reset</button>
+
+    </section>
+
     <script src="scripts/script.js"></script>
 </body>
+
 </html>
