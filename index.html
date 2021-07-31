@@ -6,41 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>This is the prototype for later.</title>
+    <title>Daily Writing Prompt</title>
 </head>
 
 <body>
-    <!-- TODO: Create button styles. -->
-    <section id="landing-page">
-        <div id="introduction">
-            <h1>Daily Writing Prompt</h1>
-            <button type="button" onclick="randomPrompt()">Randomizer</button>
+    <section id="landing-page-grid">
+        <div id="introduction-grid-item">
+            <div id="introduction">
+                <p id="title">Daily Writing Prompt</p>
+                <a href="#prompt-section">
+                    <button type="button" onclick="randomPrompt()">Random Prompt</button>
+                </a>
+            </div>
         </div>
+        <div id="horizontal-line"></div>
     </section>
 
+    <!-- TODO: Change the grid layout for this. -->
+    <!-- TODO: Grid item should contain two rows.
+               1 for the Characters, Plot, and Setting; bigger font please.
+                1 for the actual values. -->
     <section id="prompt-section">
         <main>
             <div class="box">
-                <p id="character">
-                    Character
-                </p>
+                <h1>Character</h1>
+                <p id="character"></p>
             </div>
             <div class="box-odd">
-                <p id="setting">
-                    Setting
-                </p>
+                <h1>Setting</h1>
+                <p id="setting"></p>
             </div>
             <div class="box">
-                <p id="plot">
-                    Plot
-                </p>
+                <h1>Plot</h1>
+                <p id="plot"></p>
             </div>
         </main>
         <button type="button" onclick="reset()">Reset</button>
-
+        <button type="button" onclick="randomPrompt()">Randomizer</button>
     </section>
 
     <script src="scripts/script.js"></script>
 </body>
-
 </html>

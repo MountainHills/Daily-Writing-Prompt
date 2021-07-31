@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kufam:wght@500&family=Lato:wght@700&display=swap');
 
+/* Web page theme. */
+:root {
+    --main-background-color: #055052;
+    --darker-background-color: #003638;
+    --title-color: #f3f2c9;
+    --paragraph-color: #53b8bb;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,21 +21,39 @@ body {
 }
 
 /* General Components */
+ button {
+    background-color: var(--darker-background-color);
+    color: var(--paragraph-color);
+    border: none;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
 
+button:hover {
+    background-color: var(--paragraph-color);
+    color: var(--darker-background-color);
+    transition-duration: 150ms;
+}
 
 /* Landing-Section */
-
-#landing-page {
+#landing-page-grid {
     height: 100vh;
+    display: grid;
+    grid-template-rows:auto 0.015fr;
+    color: var(--title-color);
+    background-color: var(--main-background-color);
+}
+
+#introduction-grid-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
 }
 
 #introduction {
     display: flex;
-    background-color: brown;
     flex-direction: column;    
     justify-content: center;
     align-items: center;
@@ -36,30 +62,58 @@ body {
     width: auto;
 }
 
-#introduction h1 {
-    font-size: 3rem;
+#introduction #title {
+    font-size: 4rem;
     padding-bottom: 1.6rem;
-    background-color: white;
+    /* background-color: white; */
 }
 
+#horizontal-line {
+    background-color: var(--title-color);
+}
 /* Prompt-Section */
+
+/* TODO: Place new grid here. */
+
+#prompt-section {
+    height: 100vh;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 main {
     display: grid;
+    height: 100%;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .box, .box-odd {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    color: white;
+    text-align: center;
+    height: 100%;
+    /* color: white; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.box p, .box-odd p {
+    color: var(--paragraph-color);
+}
+
+.box h1, .box-odd h1 {
+    color: var(--title-color);
+}
+
 .box {
-    background-color: green;
+    background-color: var(--main-background-color);
 }
 
 .box-odd {
-    background-color: blue;
+    background-color: var(--darker-background-color);
 }

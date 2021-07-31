@@ -66,9 +66,9 @@ function randomPrompt()
 // Resets the boxes containing the prompt.
 function reset()
 {
-    document.getElementById("character").innerHTML = "Character";
-    document.getElementById("setting").innerHTML = "Setting";
-    document.getElementById("plot").innerHTML = "Plot";
+    document.getElementById("character").innerHTML = "";
+    document.getElementById("setting").innerHTML = "";
+    document.getElementById("plot").innerHTML = "";
 
     /* 
         TODO:
