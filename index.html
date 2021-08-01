@@ -15,36 +15,37 @@
             <div id="introduction">
                 <p id="title">Daily Writing Prompt</p>
                 <a href="#prompt-section">
-                    <button type="button" onclick="randomPrompt()">Random Prompt</button>
+                    <button type="button" onclick="randomPrompt()">Create Random Prompt</button>
                 </a>
             </div>
         </div>
         <div id="horizontal-line"></div>
     </section>
 
-    <!-- TODO: Change the grid layout for this. -->
-    <!-- TODO: Grid item should contain two rows.
-               1 for the Characters, Plot, and Setting; bigger font please.
-                1 for the actual values. -->
     <section id="prompt-section">
-        <main>
-            <div class="box">
-                <h1>Character</h1>
-                <p id="character"></p>
-            </div>
-            <div class="box-odd">
-                <h1>Setting</h1>
-                <p id="setting"></p>
-            </div>
-            <div class="box">
-                <h1>Plot</h1>
-                <p id="plot"></p>
-            </div>
-        </main>
-        <button type="button" onclick="reset()">Reset</button>
-        <button type="button" onclick="randomPrompt()">Randomizer</button>
+        <div id="prompt-grid">
+            <main>
+                <div class="prompt-grid-item box">
+                    <p class="prompt-title">Character</p>
+                    <p id="character"></p>
+                </div>
+                <div class="prompt-grid-item box-odd">
+                    <p class="prompt-title">Setting</p>
+                    <p id="setting"></p>
+                </div>
+                <div class="prompt-grid-item box">
+                    <p class="prompt-title">Plot</p>
+                    <p id="plot"></p>
+                </div>
+            </main>
+        </div>
+        <div id="button-holder">
+            <button type="button" onclick="reset()">Reset</button>
+            <button type="button" onclick="randomPrompt()">Randomize</button>
+        </div>
     </section>
 
     <script src="scripts/script.js"></script>
 </body>
+
 </html>

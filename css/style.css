@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kufam:wght@500&family=Lato:wght@700&display=swap');
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+    display: none;
+}
+
 /* Web page theme. */
 :root {
     --main-background-color: #055052;
@@ -29,6 +34,7 @@ body {
     text-decoration: none;
     font-size: 1rem;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 button:hover {
@@ -77,37 +83,48 @@ button:hover {
 
 #prompt-section {
     height: 100vh;
-    /* background-color: yellow; */
+    display: grid;
+    grid-template-rows: auto 10%;
+}
+
+#prompt-grid {
+    background-color: aquamarine;
+}
+
+#button-holder {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--title-color);
+    height: 100%;
+    width: 100%;
+}
+
+.prompt-grid-item {
+    display: grid;
+    grid-template-rows: 40% auto;
 }
 
 main {
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.box, .box-odd {
+.prompt-title, #character, #setting, #plot {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     text-align: center;
-    height: 100%;
-    /* color: white; */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.box p, .box-odd p {
-    color: var(--paragraph-color);
-}
-
-.box h1, .box-odd h1 {
+    font-size: 2.4rem;
     color: var(--title-color);
+}
+
+#character, #setting, #plot {
+    color: var(--paragraph-color);
+    align-items: flex-start;
+    font-size: 1.1rem;
 }
 
 .box {
@@ -117,3 +134,15 @@ main {
 .box-odd {
     background-color: var(--darker-background-color);
 }
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: initial;
+    }
+
+    #character, #setting, #plot {
+        align-items: center;
+        font-size: 1.2em;
+    }
+  }
+  
