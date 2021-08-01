@@ -14,6 +14,12 @@ character.push("Unsuspicious Genious Detective");
 character.push("Scummy Businessman");
 character.push("Disclpined SWAT Soldier");
 character.push("Hidden-Identity Noble");
+character.push("Lazy Ambitious Man")
+character.push("Rock man");
+character.push("Daughter of a caring Father.");
+character.push("Hidden mage");
+character.push("Assassin");
+character.push("Spirit Farmer");
 
 // --> Setting
 setting.push("Ancient Cultivation China");
@@ -25,7 +31,7 @@ setting.push("A new settlement in the Forest");
 setting.push("The ungrowing abandoned village");
 setting.push("The land where the sun doesn't appear");
 setting.push("A place surrounded by fog.");
-
+setting.push("Slum areas");
 
 // --> Plot
 plot.push("The main character has a system that enables him to see the max skill ceiling of every individual.");
@@ -37,6 +43,12 @@ plot.push("Training to be at the top");
 plot.push("Reaching the skies to smite the Gods");
 plot.push("Goes back in time to get an important item");
 plot.push("Goes to an alternate reality to drink soda.");
+plot.push("Escaping the village");
+plot.push("Fixing an item");
+plot.push("Reaching an important place.");
+plot.push("Cooking the perfect food.");
+plot.push("Looking for a sign (a literal sign, a symbol, or event.)");
+plot.push("Preparing a meal.");
 
 // Get random numbers for the plot.
 
@@ -54,13 +66,6 @@ function randomPrompt()
     document.getElementById("character").innerHTML = character[randomizer(character)];
     document.getElementById("setting").innerHTML = setting[randomizer(setting)];
     document.getElementById("plot").innerHTML = plot[randomizer(plot)];
-
-    /*
-        TODO:
-        If the randomizer is clicked on the landing page, the view would go to the prompt-section.
-            -> It would also delete the button on the landing page.
-        If the randomizer is clicked on the section page, the view would still remain as is.
-    */
 }
 
 // Resets the boxes containing the prompt.
@@ -69,10 +74,4 @@ function reset()
     document.getElementById("character").innerHTML = "";
     document.getElementById("setting").innerHTML = "";
     document.getElementById("plot").innerHTML = "";
-
-    /* 
-        TODO:
-        The reset button would not appear until the button on the landing page is gone.
-            If this button is pressed then the 
-    */
 }
